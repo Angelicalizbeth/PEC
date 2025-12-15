@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>¿Cómo empezar?</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background:
+                linear-gradient(
+                    rgba(255,255,255,0.9),
+                    rgba(255,255,255,0.9)
+                ),
+                url('snoo.png') no-repeat center center/cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px;
+            color: #2e4d3b;
+        }
+
+        .contenedor {
+            background: rgba(255,255,255,0.95);
+            max-width: 950px;
+            padding: 45px;
+            border-radius: 35px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.18);
+            animation: aparecer 1.1s ease;
+            border: 2px solid #c8e6c9;
+        }
+
+        h1 {
+            font-size: 2.8em;
+            margin-bottom: 25px;
+            color: #388e3c;
+            text-align: center;
+        }
+
+        h2 {
+            margin-top: 30px;
+            margin-bottom: 15px;
+            color: #2e7d32;
+        }
+
+        p {
+            font-size: 1.15em;
+            line-height: 1.7;
+            margin-bottom: 20px;
+            color: #4e6f5b;
+            text-align: justify;
+        }
+
+        ul {
+            margin-left: 25px;
+            margin-bottom: 20px;
+            color: #4e6f5b;
+        }
+
+        li {
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+
+        .boton {
+            display: inline-block;
+            margin-top: 30px;
+            background: linear-gradient(135deg, #66bb6a, #43a047);
+            color: #0b2e13;
+            padding: 14px 28px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            box-shadow: 0 8px 20px rgba(67,160,71,0.4);
+            transition: all 0.3s ease;
+        }
+
+        .boton:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 14px 30px rgba(76,175,80,0.6);
+        }
+
+        @keyframes aparecer {
+            from {
+                opacity: 0;
+                transform: translateY(25px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="contenedor">
+        <h1>¿Cómo empezar?</h1>
+
+        <p>
+            La gran cantidad de residuos sólidos que generamos y su manejo inadecuado
+            ocasionan problemas de salud y de contaminación del suelo, el aire y el
+            agua. Por ello, es importante participar activamente en la solución de
+            este problema desde nuestras actividades diarias.
+        </p>
+
+        <h2>Reducir</h2>
+
+        <ul>
+            <li>Reduce la cantidad de residuos que generas.</li>
+            <li>
+                Prefiere lavar en lugar de desechar, por ejemplo:
+                <ul>
+                    <li>En fiestas y días de campo emplea utensilios lavables.</li>
+                    <li>Para tus bebidas en la escuela usa recipientes reutilizables.</li>
+                </ul>
+            </li>
+            <li>
+                Utiliza bolsas de manta, zacate o algodón en lugar de bolsas de plástico.
+            </li>
+            <li>
+                Usa moderadamente servilletas, pañuelos desechables, papel de baño y bolsas
+                de papel.
+            </li>
+            <li>
+                Usa toalla en lugar de papel para secarte las manos.
+            </li>
+            <li>
+                Aprovecha los sobrantes de shampoo que quedan en el fondo de los envases;
+                agrega un poco de agua y agita hasta mezclar.
+            </li>
+        </ul>
+
+        <a href="menu.html" class="boton">← Volver al menú</a>
+    </div>
+
+</body>
+</html>

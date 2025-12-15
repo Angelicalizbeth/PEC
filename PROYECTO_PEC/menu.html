@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Menú Principal</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            height: 100vh;
+            background:
+                linear-gradient(
+                    rgba(255,255,255,0.85),
+                    rgba(255,255,255,0.85)
+                ),
+                url('snoo.png') no-repeat center center/cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #2e4d3b;
+        }
+
+        .menu {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 55px;
+            border-radius: 35px;
+            width: 85%;
+            max-width: 900px;
+            text-align: center;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.18);
+            animation: aparecer 1.2s ease;
+            border: 2px solid #c8e6c9;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            color: #388e3c;
+        }
+
+        p {
+            margin-bottom: 45px;
+            font-size: 1.25em;
+            color: #4e6f5b;
+        }
+
+        .opciones {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 30px;
+        }
+
+        .opcion {
+            background: linear-gradient(135deg, #e8f5e9, #f1f8e9);
+            border-radius: 25px;
+            padding: 35px 25px;
+            cursor: pointer;
+            transition: all 0.35s ease;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+            border: 2px solid transparent;
+        }
+
+        .opcion:hover {
+            transform: translateY(-10px) scale(1.04);
+            box-shadow: 0 18px 35px rgba(76,175,80,0.4);
+            border: 2px solid #81c784;
+        }
+
+        .opcion span {
+            font-size: 3em;
+            display: block;
+            margin-bottom: 15px;
+        }
+
+        .opcion h3 {
+            font-size: 1.3em;
+            color: #2e7d32;
+        }
+
+        @keyframes aparecer {
+            from {
+                opacity: 0;
+                transform: scale(0.95);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="menu">
+        <h1>Menú Principal</h1>
+        <p>Selecciona la sección que deseas explorar</p>
+
+        <div class="opciones">
+            <div class="opcion" onclick="irA('quees.html')">
+                <span>🌱</span>
+                <h3>¿Que es?</h3>
+            </div>
+
+            <div class="opcion" onclick="irA('comoempezar.html')">
+                <span>♻️</span>
+                <h3>¿Como empezar?</h3>
+            </div>
+
+            <div class="opcion" onclick="irA('beneficios.html')">
+                <span>📊</span>
+                <h3>Beneficios</h3>
+            </div>
+
+            <div class="opcion" onclick="irA('programas.html')">
+                <span>💡</span>
+                <h3>Programas comunitarios</h3>
+        </div>
+             <div class="opcion" onclick="irA('juego.html')">
+                <span>✨</span>
+                <h3>Juego de residuos</h3>
+             </div>
+
+    <script>
+        function irA(pagina) {
+            window.location.href = pagina;
+        }
+    </script>
+
+</body>
+</html>

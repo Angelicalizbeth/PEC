@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Beneficios</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background:
+                linear-gradient(
+                    rgba(255,255,255,0.9),
+                    rgba(255,255,255,0.9)
+                ),
+                url('snoo.png') no-repeat center center/cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px;
+            color: #2e4d3b;
+        }
+
+        .contenedor {
+            background: rgba(255,255,255,0.95);
+            max-width: 950px;
+            padding: 45px;
+            border-radius: 35px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.18);
+            animation: aparecer 1.1s ease;
+            border: 2px solid #c8e6c9;
+        }
+
+        h1 {
+            font-size: 2.8em;
+            margin-bottom: 25px;
+            color: #388e3c;
+            text-align: center;
+        }
+
+        h2 {
+            margin-top: 30px;
+            margin-bottom: 15px;
+            color: #2e7d32;
+        }
+
+        ul {
+            margin-left: 25px;
+            color: #4e6f5b;
+        }
+
+        li {
+            margin-bottom: 15px;
+            font-size: 1.15em;
+            line-height: 1.6;
+        }
+
+        .boton {
+            display: inline-block;
+            margin-top: 30px;
+            background: linear-gradient(135deg, #66bb6a, #43a047);
+            color: #0b2e13;
+            padding: 14px 28px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            box-shadow: 0 8px 20px rgba(67,160,71,0.4);
+            transition: all 0.3s ease;
+        }
+
+        .boton:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 14px 30px rgba(76,175,80,0.6);
+        }
+
+        @keyframes aparecer {
+            from {
+                opacity: 0;
+                transform: translateY(25px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="contenedor">
+        <h1>Beneficios del reciclaje</h1>
+
+        <h2>🌍 Ambientales</h2>
+        <ul>
+            <li>Disminución de residuos sólidos.</li>
+            <li>Incremento de la calidad del suelo.</li>
+            <li>Reducción de la emisión de gases de efecto invernadero.</li>
+            <li>Mejora de la calidad del aire.</li>
+            <li>Contribución a la estabilización del clima.</li>
+        </ul>
+
+        <h2>💰 Económicos</h2>
+        <ul>
+            <li>
+                Los residuos sólidos pueden ser vendidos a empresas que los reciclan.
+            </li>
+            <li>
+                Se ahorran costos en el hogar utilizando materiales reciclados.
+            </li>
+            <li>
+                Se pueden crear diferentes artículos hechos con material reciclado.
+            </li>
+            <li>
+                El reciclaje puede convertirse en un negocio mediante la venta de
+                artículos elaborados con materiales reciclados.
+            </li>
+        </ul>
+
+        <h2>👥 Sociales</h2>
+        <ul>
+            <li>
+                Se impulsa una cultura de responsabilidad y compromiso con el medioambiente.
+            </li>
+        </ul>
+
+        <a href="menu.html" class="boton">← Volver al menú</a>
+    </div>
+
+</body>
+</html>

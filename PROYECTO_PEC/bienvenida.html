@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Bienvenida</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            height: 100vh;
+            background:
+                linear-gradient(
+                    rgba(255, 255, 255, 0.75),
+                    rgba(255, 255, 255, 0.75)
+                ),
+                url('snoo.png') no-repeat center center/cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #2e4d3b;
+        }
+
+        .contenedor {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(8px);
+            padding: 48px;
+            border-radius: 30px;
+            width: 70%;
+            max-width: 620px;
+            text-align: center;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.18);
+            animation: aparecer 1.2s ease;
+            border: 2px solid #c8e6c9;
+        }
+
+        h1 {
+            font-size: 2.6em;
+            margin-bottom: 20px;
+            color: #388e3c;
+        }
+
+        #datos {
+            font-size: 1.15em;
+            margin-bottom: 22px;
+            line-height: 1.6;
+        }
+
+        p {
+            font-size: 1.1em;
+        }
+
+        /* ===== BOTÓN CONTINUAR CÁLIDO ===== */
+        .btn-continuar {
+            margin-top: 35px;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 15px 46px;
+            border-radius: 40px;
+            text-decoration: none;
+            font-size: 1.15em;
+            font-weight: bold;
+            color: white;
+            background: linear-gradient(135deg, #81c784, #66bb6a);
+            box-shadow: 0 10px 22px rgba(102,187,106,0.55);
+            transition: all 0.35s ease;
+        }
+
+        .btn-continuar:hover {
+            transform: translateY(-4px) scale(1.05);
+            box-shadow: 0 15px 30px rgba(102,187,106,0.7);
+        }
+
+        @keyframes aparecer {
+            from {
+                opacity: 0;
+                transform: translateY(25px) scale(0.95);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="contenedor">
+        <h1>✦ ¡Bienvenido! ࿔</h1>
+
+        <p id="datos"></p>
+
+        <p>
+            Gracias por registrarte y unirte con nosotros.<br>
+            Somos <strong>Little Trees Programming</strong> 🌳💻
+        </p>
+
+        <a href="introduccion.html" class="btn-continuar">
+            Continuar ➜
+        </a>
+    </div>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const nombre = params.get("nombre") || "No especificado";
+        const grupo = params.get("grupo") || "No especificado";
+        const carrera = params.get("carrera") || "No especificado";
+
+        document.getElementById("datos").innerHTML = `
+            <strong>Nombre:</strong> ${nombre}<br>
+            <strong>Grupo:</strong> ${grupo}<br>
+            <strong>Carrera:</strong> ${carrera}`;
+    </script>
+
+</body>
+</html>

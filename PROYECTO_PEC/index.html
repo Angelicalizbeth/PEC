@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Registro</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            height: 100vh;
+            background:
+                linear-gradient(
+                    rgba(255,255,255,0.85),
+                    rgba(255,255,255,0.85)
+                ),
+                url('snoo.png') no-repeat center center/cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #2e4d3b;
+        }
+
+        .formulario {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 45px;
+            border-radius: 30px;
+            width: 380px;
+            text-align: center;
+            box-shadow: 0 18px 40px rgba(0,0,0,0.2);
+            animation: aparecer 1.2s ease;
+            border: 2px solid #c8e6c9;
+        }
+
+        h1 {
+            margin-bottom: 10px;
+            font-size: 2.4em;
+            color: #388e3c;
+        }
+
+        p {
+            margin-bottom: 25px;
+            font-size: 1.1em;
+            color: #4e6f5b;
+        }
+
+        input {
+            width: 100%;
+            padding: 14px;
+            margin: 12px 0;
+            border-radius: 14px;
+            border: 2px solid #c8e6c9;
+            outline: none;
+            font-size: 1em;
+            transition: 0.3s;
+        }
+
+        input:focus {
+            border-color: #66bb6a;
+            box-shadow: 0 0 8px rgba(102,187,106,0.4);
+        }
+
+        button {
+            margin-top: 20px;
+            background: linear-gradient(135deg, #66bb6a, #43a047);
+            color: #0b2e13;
+            border: none;
+            padding: 14px;
+            width: 100%;
+            border-radius: 30px;
+            font-size: 1.1em;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 8px 20px rgba(67,160,71,0.4);
+            transition: all 0.35s ease;
+        }
+
+        button:hover {
+            transform: translateY(-4px) scale(1.02);
+            box-shadow: 0 14px 30px rgba(76,175,80,0.6);
+        }
+
+        @keyframes aparecer {
+            from {
+                opacity: 0;
+                transform: translateY(30px) scale(0.95);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+        body {
+    height: 100vh;
+    background:
+        linear-gradient(
+            rgba(255,255,255,0.85),
+            rgba(255,255,255,0.85)
+        ),
+        url('fondo.jpg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #2e4d3b;
+}
+
+    </style>
+</head>
+<body>
+
+    <div class="formulario">
+        <h1>🌿 Registro</h1>
+        <p>Ingresa tus datos para comenzar</p>
+
+        <form action="bienvenida.html" method="get">
+            <input type="text" name="nombre" placeholder="Nombre completo" required>
+            <input type="text" name="grupo" placeholder="Grupo" required>
+            <input type="text" name="carrera" placeholder="Carrera" required>
+            <button type="submit">Continuar ➜</button>
+        </form>
+    </div>
+
+</body>
+</html>
